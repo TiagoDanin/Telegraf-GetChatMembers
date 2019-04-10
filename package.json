@@ -1,0 +1,44 @@
+{
+  "name": "telegraf-getchatmembers",
+  "main": "index.js",
+  "version": "0.0.1",
+  "description": "Implementation of getChatMembers method in Telegraf using cache",
+  "author": {
+    "name": "Tiago Danin",
+    "email": "TiagoDanin@outlook.com",
+    "url": "https://TiagoDanin.github.io"
+  },
+  "license": "MIT",
+  "keywords": [
+    "telegraf",
+    "cache",
+    "telegram",
+    "middleware",
+    "method",
+    "members"
+  ],
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test.js"
+  },
+  "private": false,
+  "repository": "https://github.com/TiagoDanin/Telegraf-GetChatMembers.git",
+  "homepage": "https://TiagoDanin.github.io/Telegraf-GetChatMembers",
+  "bugs": "https://github.com/TiagoDanin/Telegraf-GetChatMembers/issues",
+  "github": {
+    "name": "Telegraf-GetChatMembers",
+    "owner": "TiagoDanin"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "index.js"
+  ],
+  "engines": {
+    "node": ">=8"
+  },
+  "related": [
+    "telegraf-start-parts",
+    "telegraf-test"
+  ]
+}
