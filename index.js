@@ -15,18 +15,20 @@ const getChatMembers = function (chatId) {
 }
 
 module.exports = async function (ctx, next) {
-	if (!allChats[ctx.chat.id]) {
+	if (ctx.chat && ctx.chat.id && !allChats[ctx.chat.id]) {
 		allChats[ctx.chat.id] = {}
 	}
 
-	const member = await ctx.getChatMember(ctx.from.id).catch(() => false)
-	if (!member) {
-		return next(ctx)
+	if (ctx.chat && ctx.chat.id && ctx.from && ctx.from.id) {
+		const member = await ctx.getChatMember(ctx.from.id).catch(() => false)
+		if (!member) {
+			return next(ctx)
+		}
+	
+		allChats[ctx.chat.id][ctx.from.id] = member
 	}
 
-	allChats[ctx.chat.id][ctx.from.id] = member
 	ctx.getChatMembers = getChatMembers
-
 	return next(ctx)
 }
 module.exports.check = getChatMembers
