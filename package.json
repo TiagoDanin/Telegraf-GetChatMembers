@@ -35,7 +35,7 @@
     "index.js"
   ],
   "engines": {
-    "node": ">=8"
+    "node": ">=v14.16.1"
   },
   "related": [
     "telegraf-start-parts",
